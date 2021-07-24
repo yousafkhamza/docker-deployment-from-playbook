@@ -1,14 +1,14 @@
-# Docker Deployment from a Ansible Playbook
+# Docker Deployment from an Ansible Playbook
 [![Build](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
 ---
 ## Description
-It's just an ansible playbook and that the playbook install docker and deploy a nodejs container through that playbook, all that plays are using with inbuilt ansible moduels.
+It's just an ansible playbook and that the playbook installs docker and deploys a nodejs container through that playbook, all that plays are using with inbuilt ansible modules.
 
 ----
 ## Feature
-- Easy to deploy a container with the help of ansible playbook
-- All these plays are using inbuilt ansible moduels 
+- Easy to deploy a container with the help of an ansible-playbook
+- All these plays are using inbuilt ansible modules 
 - Docker installation and container spin up through the same playbook
 
 ----
@@ -135,18 +135,18 @@ _vim hosts_
 [slave]
 172.31.10.48 ansible_user="ec2-user" ansible_port=22 ansible_ssh_private_key_file="/root/abcd.pem"
 ```
-> Please note that you may use your slave server's details also please put your key absalute path and avoid unnecessory issues
+> Please note that you may use your slave server's details also please put your key absolute path and avoid unnecessary issues
 
 ### Output Screenshot
 ![alt_txt](https://i.ibb.co/x8DXspP/Screenshot-10.png)
 ----
 ## Reference
 
-On this playbook were I used my old [nodjs](https://github.com/yousafkhamza/nodejs-dockerfile) container image so please be check the same. I have already explained how we create a image and container from docker file. 
+On this playbook was I used my old [nodjs](https://github.com/yousafkhamza/nodejs-dockerfile) container image so please be check the same. I have already explained how we create an image and container from the docker file. 
 
 ----
 ## Conclusion
-It's a simple ansible playbook how we pulled a image from docker hub and then how to spin up a container from that image through ansible. I just uploaded the same for educationel purpose and this playbook we used inbuilt modules so it shuould more helpful for freshers who started ansible and docker.
+It's a simple Ansible playbook how we pulled an image from docker hub and then how to spin up a container from that image through ansible. I just uploaded the same for educational purposes and this playbook we used inbuilt modules so it is should more helpful for freshers who started ansible and docker.
 
 ### ⚙️ Connect with Me 
 
