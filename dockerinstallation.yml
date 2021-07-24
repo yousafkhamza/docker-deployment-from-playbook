@@ -1,6 +1,6 @@
 ---
 - name: 'Installing docker through ansible'
-  hosts: localhost
+  hosts: all
   become: true
   vars:
     container_name: "ansible_nodejs"
