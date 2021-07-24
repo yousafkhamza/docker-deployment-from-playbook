@@ -137,6 +137,8 @@ _vim hosts_
 ```
 > Please note that you may use your slave server's details also please put your key absalute path and avoid unnecessory issues
 
+### Output Screenshot
+![alt_txt](https://i.ibb.co/x8DXspP/Screenshot-10.png)
 ----
 ## Reference
 
