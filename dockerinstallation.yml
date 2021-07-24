@@ -1,0 +1,43 @@
+---
+- name: 'Installing docker through ansible'
+  hosts: localhost
+  become: true
+  vars:
+    container_name: "ansible_nodejs"
+    container_image: "yousafkhamza/node"
+    container_port: "80:3000"
+  tasks:
+  
+    - name: "PIP Installation"
+      yum:
+        name: pip
+        state: present
+        
+    - name: "Depandancy Task Install dokcer-py"
+      pip:
+        name: docker-py
+        state: present
+
+    - name: "Docker Installtion"
+      yum:
+        name:
+          - docker
+        state: present
+
+    - name: "Docker Service start and Enable"
+      service:
+        name: docker
+        state: restarted
+        enabled: true
+
+    - name: "Docker image from docker hub"
+      docker_image:
+       name: "{{ container_image }}"
+       source: pull
+
+    - name: "Create a container from image"
+      docker_container:
+       name: "{{ container_name }}"
+       image: "{{ container_image }}"
+       ports: "{{ container_port }}"
+       state: started
